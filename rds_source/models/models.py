@@ -5,6 +5,7 @@ from sqlalchemy.orm import relationship
 Base = declarative_base()
 
 class Student(Base):
+    '''class for students table in sql alchemy'''
     __tablename__ = 'students'
     id = Column(Integer, primary_key=True)
     first_name = Column(String(100))
@@ -16,6 +17,7 @@ class Student(Base):
     grades = relationship('Grade', backref = 'student')
 
 class Grade(Base):
+    '''class for grades table in sql alchemy'''
     __tablename__ = 'grades'
     id = Column(Integer, primary_key=True)
     class_name = Column(String(100))
