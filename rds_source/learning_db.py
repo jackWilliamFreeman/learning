@@ -1,10 +1,6 @@
 from sqlalchemy import create_engine
 
 class learning_db():
-    rds_host  = "database-1.ci9xxovcnbmy.ap-southeast-2.rds.amazonaws.com"
-    name = 'jack'
-    password = 'roose1velt'
-    db_name = "learning"
 
     def get_connection(engine):
         connection = engine.connect()
